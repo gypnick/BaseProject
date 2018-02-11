@@ -61,4 +61,6 @@
     <!--快速索引bar颜色-->
     <color name="side_bar">#919091</color>
     <color name="side_bar_pressed">#BFBFBF</color>
+    <color name="default_page_background">#BFBFBF</color>
+    <color name="color_text_9">#999999</color>
 </resources>

@@ -18,4 +18,11 @@ public interface BaseView {
      */
     void hideWaitingDialog();
     <T>LifecycleTransformer <T>bindLifecycle();
+
+    /**
+     * 网络加载错误
+     * @param eMsg
+     */
+    void showLoadToastError(String eMsg);
+
 }

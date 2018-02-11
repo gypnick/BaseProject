@@ -9,15 +9,15 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import site.site8.baseproject.R;
-import site.site8.baseproject.widget.ProgressWebView;
+
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import site.site8.baseproject.R;
+import site.site8.baseproject.widget.ProgressWebView;
 
 
 /**
- * @创建者 CSDN_LQR
  * @描述 内置浏览器界面
  */
 public class WebViewActivity extends BaseActivity {

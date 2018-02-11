@@ -1,20 +1,21 @@
 package site.site8.baseproject.mvp.base;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import java.util.ArrayList;
 
-
-public class FragmentController {
+/**
+ * Fragment里面嵌套Fragment
+ */
+public class FragmentChildController {
 
 	private int containerId;
 	private FragmentManager fm;
 	private ArrayList<Fragment> fragments;
 
-	private  FragmentController controller;
+	private FragmentChildController controller;
 
 	public int getCurrPosition() {
 		return currPosition;
@@ -29,9 +30,9 @@ public class FragmentController {
 		controller = null;
 	}
 
-	public FragmentController(FragmentActivity activity, int containerId, ArrayList<Fragment> fragments) {
+	public FragmentChildController(Fragment fragment, int containerId, ArrayList<Fragment> fragments) {
 		this.containerId = containerId;
-		fm = activity.getSupportFragmentManager();
+		fm = fragment.getChildFragmentManager();
 		this.fragments = fragments;
 		controller=this;
 		initFragment();

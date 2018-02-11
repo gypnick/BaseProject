@@ -2,7 +2,7 @@ package site.site8.baseproject.mvp.base;
 
 import android.content.Context;
 
-import site.site8.baseproject.config.JsonConvert;
+
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.HttpHeaders;
 import com.lzy.okgo.model.HttpParams;
@@ -13,6 +13,8 @@ import java.lang.reflect.Type;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import site.site8.baseproject.config.JsonConvert;
+import site.site8.baseproject.uitl.SPUtils;
 
 public class BaseFragmentPresenter<V extends BaseView> {
 
@@ -25,7 +27,7 @@ public class BaseFragmentPresenter<V extends BaseView> {
     }
 
 /*================== 以下是网络请求接口 ==================*/
-//Type type = new TypeToken<LzyResponse<ServerModel>>() {}.getType();
+//Type type = new TypeToken<ResponseBean<ServerModel>>() {}.getType();
 
     public <T> Observable<T> getData(String url,Type type) {
         return getData(url,type,null,null);
@@ -62,6 +64,12 @@ public class BaseFragmentPresenter<V extends BaseView> {
 
     public <T> Observable<T> postData(String url,Type type) {
         return postData(url,type,null,null);
+    }
+
+    public <T> Observable<T> postDataByToken(String url,Type type) {
+        HttpParams httpParams = new HttpParams();
+//        httpParams.put("user_token", SPUtils.getUserToken());
+        return postData(url,type,null,httpParams);
     }
 
 

@@ -134,7 +134,7 @@ public class LogUtils {
      */
     public static void sf(String msg) {
         if (mDebuggable >= LEVEL_ERROR) {
-            System.out.println("----------" + msg + "----------");
+            System.out.println("=============" + msg + "=============");
         }
     }
 
