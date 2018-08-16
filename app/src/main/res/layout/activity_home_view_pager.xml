@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--type中声明的就是我们的用户实体类User，一定要写全，带着包名，我们给这个实体类命名为user-->
+    <data>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.iwisedev.baseproject.demo.HomeViewPagerActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/include_toolbar" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
